@@ -13,7 +13,7 @@ RSpec.describe Todo, type: :model do
     expect(Todo.new(valid_attributes)).to be_valid
   end
 
-  describe 'task' do
+  describe 'ToDo task' do
     it 'is invalid if task is empty' do
       valid_attributes[:task] = nil
 
@@ -27,7 +27,7 @@ RSpec.describe Todo, type: :model do
     end
   end
 
-  describe 'deadline' do
+  describe 'ToDo deadline' do
     it 'is invalid if deadline is empty' do
       valid_attributes[:deadline] = nil
 
@@ -47,7 +47,11 @@ RSpec.describe Todo, type: :model do
     end
   end
 
-  describe 'completed' do
+  describe 'ToDo completed' do
+    it 'is invalid if completed is not present' do
+      valid_attributes[:completed] = nil
 
+      expect(Todo.new(valid_attributes)).to_not be_valid
+    end
   end
 end
