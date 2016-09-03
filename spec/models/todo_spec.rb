@@ -5,7 +5,6 @@ RSpec.describe Todo, type: :model do
     {
       task: 'Make ToDo list',
       deadline: Date.current,
-      completed: false
     }
   }
 
@@ -48,6 +47,10 @@ RSpec.describe Todo, type: :model do
   end
 
   describe 'ToDo completed' do
+    it 'instantiates to a default value of false' do
+      expect(Todo.new(valid_attributes).completed).to eq(false)
+    end
+
     it 'is invalid if completed is not present' do
       valid_attributes[:completed] = nil
 
