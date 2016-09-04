@@ -1,13 +1,7 @@
 class Todo < ActiveRecord::Base
 
   validates :task, :deadline, presence: true
-  validate :deadline_cannot_be_in_past, :completed_cannot_be_empty
-
-  def deadline_cannot_be_in_past
-    if deadline && deadline < Date.current
-      errors.add(:deadline, "Date cannot be in the past.")
-    end
-  end
+  validate :completed_cannot_be_empty
 
 # cannot validate presence for 'completed == false' value
   def completed_cannot_be_empty

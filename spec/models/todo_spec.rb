@@ -38,12 +38,6 @@ RSpec.describe Todo, type: :model do
 
       expect(Todo.new(valid_attributes)).to_not be_valid
     end
-
-    it 'cannot have a deadline that is in the past' do
-      valid_attributes[:deadline] = Date.new(2000,1,1)
-
-      expect(Todo.new(valid_attributes)).to_not be_valid
-    end
   end
 
   describe 'ToDo completed' do
