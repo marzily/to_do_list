@@ -11,7 +11,7 @@
       <tr>
         <td><%= link_to todo.task, todo_path(id: todo.id) %></td>
         <td><%= todo.deadline %></td>
-        <td><%=  %></td>
+        <td><%= check_box_tag("todo", "completed", checked = todo.completed, id: "completed")%></td>
       </tr>
     <% end %>
   <tbody>

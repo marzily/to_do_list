@@ -12,13 +12,11 @@
   <%= f.label :deadline %>:
   <%= f.text_field :deadline, value: 'mm-dd-yyyy' %><br/>
 
-  <!-- <%= f.label :completed %>:
-  <%= f.check_box(:completed, value: "yes") %>
-  <%= label_tag(:completed, "Yes") %>
+  <%= f.label :completed %>:
+  <%= f.check_box(:completed) %><br/>
+  <!-- <%= label_tag(:completed, "Yes") %>
   <%= check_box_tag(:completed) %>
   <%= label_tag(:completed, "No") %><br/> -->
-  <%= f.label :completed %>:
-  <%= f.text_field :completed %><br/>
 
   <%= f.label :more_details %>:
   <%= f.text_area :more_details, size: "60x12" %><br/>
