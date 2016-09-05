@@ -27,4 +27,11 @@ RSpec.feature 'view ToDo details', type: :feature do
     expect(page).to have_content(todo.more_details)
   end
 
+  it 'has a button to return to ToDos list' do
+    expect(page).to have_button('ToDos List')
+    
+    click_button('ToDos List')
+
+    expect(current_path).to eq(todos_path)
+  end
 end

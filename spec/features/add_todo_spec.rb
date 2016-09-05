@@ -11,15 +11,15 @@ RSpec.feature 'add ToDo to list', type: :feature do
     expect(current_path).to eq(new_todo_path)
   end
 
-  it 'has the right content on the new page' do
+  before(:each) {
     visit new_todo_path
+  }
 
+  it 'has the right content on the new page' do
     expect(page).to have_content('Create a New ToDo')
   end
 
   it 'lets you add a ToDo and redirects to show' do
-    visit new_todo_path
-
     fill_in('Task', with: 'bake stuff')
     fill_in('Deadline', with: '09-30-2016')
     click_button('Add to List')
@@ -29,11 +29,9 @@ RSpec.feature 'add ToDo to list', type: :feature do
   end
 
   it 'saves the ToDo to the list' do
-    visit new_todo_path
-
     fill_in('Task', with: 'complete rails app')
     fill_in('Deadline', with: '09-30-2016')
-    within('form') do
+    within('table') do
       check('todo[completed]')
     end
     click_button('Add to List')
@@ -47,5 +45,13 @@ RSpec.feature 'add ToDo to list', type: :feature do
     within 'table' do
       expect(page).to have_checked_field('todo')
     end
+  end
+
+  it 'has a button to return to list overview' do
+    expect(page).to have_button('ToDos List')
+
+    click_button('ToDos List')
+
+    expect(current_path).to eq(todos_path)
   end
 end
