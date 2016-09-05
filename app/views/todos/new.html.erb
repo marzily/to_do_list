@@ -1,4 +1,4 @@
-<p><%= button_to "ToDos List", todos_path, method: "get" %></p>
+<p><%= button_to "ToDos List", todos_path, method: "get", class: "return" %></p>
 
 <h1>Create a New ToDo</h1>
 
@@ -6,20 +6,38 @@
   <p><%= message %></p>
 <% end %>
 
-<table>
+<table id="new">
   <%= form_for @todo do |f| %>
-    <%= f.label :task %>:
-    <%= f.text_field :task %><br/>
+    <tbody>
+      <tr>
+        <td id="create-task">
+          <%= f.label :task %>: <br/> <br/>
+          <%= f.text_field :task, size: "60x1" %><br/>
+        </td>
 
-    <%= f.label :deadline %>:
-    <%= f.text_field :deadline, value: 'mm-dd-yyyy' %><br/>
+        <td>
+          <%= f.label :deadline %>: <br/> <br/>
+          <%= f.text_field :deadline, value: 'mm-dd-yyyy' %><br/>
+        </td>
 
-    <%= f.label :completed %>:
-    <%= f.check_box(:completed) %><br/>
+        <td>
+          <%= f.label :completed %>: <br/> <br/>
+          <%= f.check_box :completed %><br/>
+        </td>
+      </tr>
 
-    <%= f.label :more_details %>:
-    <%= f.text_area :more_details, size: "60x12" %><br/>
+      <tr>
+        <td id="details">
+          <%= f.label :more_details %>: <br/><br/>
+          <%= f.text_area :more_details, size: "60x12" %><br/>
+        </td>
+      </tr>
 
-    <%= f.submit 'Add to List' %>
+      <tr>
+        <td>
+          <%= f.submit 'Add to List' %>
+        </td>
+      </tr>
+    </tbody>
   <% end %>
 </table>

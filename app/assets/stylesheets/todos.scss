@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#add {
+#add, .return {
   margin-left: 50px;
 }
 
@@ -16,11 +16,31 @@ th {
   padding-right: 30px;
 }
 
-tr {
+td {
   text-align: center;
 }
 
 .task {
   text-align:left;
   width: 500px;
+}
+
+.return {
+  margin-top: 30px;
+  padding-left: 50px;
+}
+
+
+#new{
+  text-align: center;
+}
+
+#create-task {
+  text-align: left;
+  width: 400px;
+}
+
+#details {
+  padding-top: 30px;
+  text-align: left;
 }
