@@ -1,13 +1,14 @@
 <p><%= button_to "ToDos List", todos_path, method: "get" %></p>
+<br/>
 
 <h1><%= @todo.task %></h1>
 
-<p>
-  Deadline: <%= @todo.deadline %>
-</p>
-
-<p>
-  Completed: <%= check_box_tag("todo", "completed", checked = @todo.completed, id: "completed")%>
-</p>
+<table>
+  <tr>
+    <td>Deadline: <%= @todo.deadline %></td>
+    <td>Completed: <%= check_box_tag("todo", "completed", checked = @todo.completed, id: "completed")%></td>
+    <td><%= button_to "Delete", todo_path(id: @todo.id), method: "delete" %></td>
+  </tr>
+</table>
 
 <p><%= @todo.more_details %></p>
