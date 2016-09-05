@@ -4,7 +4,11 @@ RSpec.feature "add ToDo to list", type: :feature do
   it 'has a button to create a new ToDo on the landing page' do
     visit root_path
 
-    expect(page).to have_button("Add a ToDo")
+    expect(page).to have_button("Add ToDo")
+
+    click_button("Add ToDo")
+
+    expect(current_path).to eq(new_todo_path)
   end
 
   it 'has the right content on the new page' do
