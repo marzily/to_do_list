@@ -3,10 +3,11 @@ require "rails_helper"
 RSpec.feature "add todo to list", type: :feature do
   it 'has the right content on the new page' do
     visit new_todo_path
+    
     expect(page).to have_content("Create a New ToDo")
   end
 
-  it 'lets you add a Todo' do
+  it 'lets you add a Todo and redirects to show' do
     visit new_todo_path
 
     fill_in("Task", with: "bake stuff")
