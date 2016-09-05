@@ -10,14 +10,13 @@ RSpec.feature "add todo to list", type: :feature do
     visit new_todo_path
 
     fill_in("Task", with: "bake stuff")
-    fill_in("Month", with: "09")
-    fill_in("Day", with: "30")
-    fill_in("Year", with: "2016")
+    fill_in("Deadline", with: "09-30-2016")
+    fill_in("Completed", with: false)
     click_button("Add to List")
 
-    expect(current_path).to eq(todos_path)
-    within("table") do
+    expect(current_path).to eq(todo_path(todi_id: Todo.last.id))
+    # within("table") do
       expect(page).to have_content("bake stuff")
-    end
+    # end
   end
 end

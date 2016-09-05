@@ -10,7 +10,7 @@ class TodosController < ApplicationController
   end
 
   def create
-    @todo = Todo.new(todo_params)
+    @todo = Todo.new_with_deadline(todo_params)
 
     if @todo.save
       redirect_to @todo, notice: 'ToDo was successfully created.'
@@ -33,6 +33,6 @@ class TodosController < ApplicationController
     end
 
     def todo_params
-      params.require(:todo).permit(:task, :deadline, :completed)
+      params.require(:todo).permit(:task, :deadline, :completed, :more_details)
     end
 end
