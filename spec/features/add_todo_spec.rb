@@ -14,9 +14,14 @@ RSpec.feature "add todo to list", type: :feature do
     fill_in("Completed", with: false)
     click_button("Add to List")
 
-    expect(current_path).to eq(todo_path(todi_id: Todo.last.id))
+    # expect(current_path).to eq(todo_path(id: Todo.last.id))
     # within("table") do
-      expect(page).to have_content("bake stuff")
+      # expect(page).to have_content("bake stuff")
     # end
+
+    visit todos_path
+    within("table") do
+      expect(page).to have_content("bake stuff")
+    end
   end
 end
