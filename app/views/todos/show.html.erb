@@ -1,2 +1,13 @@
+<p><%= button_to "ToDos List", todos_path, method: "get" %></p>
+
 <h1><%= @todo.task %></h1>
-<p>Find me in app/views/todos/show.html.erb</p>
+
+<p>
+  Deadline: <%= @todo.deadline %>
+</p>
+
+<p>
+  Completed: <%= check_box_tag("todo", "completed", checked = @todo.completed, id: "completed")%>
+</p>
+
+<p><%= @todo.more_details %></p>
