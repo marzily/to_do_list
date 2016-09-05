@@ -23,4 +23,8 @@ RSpec.feature 'view ToDo details', type: :feature do
     expect(page).to have_unchecked_field('todo')
   end
 
+  it 'shows task details' do
+    expect(page).to have_content(todo.more_details)
+  end
+
 end
