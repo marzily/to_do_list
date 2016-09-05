@@ -33,6 +33,7 @@ RSpec.feature "add ToDo to list", type: :feature do
     within("table") do
       expect(page).to have_content("complete rails app")
     end
+    
     within "table" do
       expect(page).to have_checked_field("todo")
     end

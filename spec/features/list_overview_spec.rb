@@ -30,7 +30,7 @@ RSpec.feature "can see all todos on the list in an overview", type: :feature do
     expect(page).to have_content("task3")
   end
 
-  xit 'includes task proper task details in overview' do
+  it 'includes task proper task details in overview' do
     Todo.create(task: "task",
                 deadline: Date.strptime("09-30-2016", '%m-%d-%Y'),
                 completed: true,
@@ -41,8 +41,9 @@ RSpec.feature "can see all todos on the list in an overview", type: :feature do
     expect(page).to have_content("task")
     expect(page).to have_content(Date.strptime("09-30-2016", '%m-%d-%Y'))
 
-    completed_box = find('#completed')
-    expect(completed_box).to be_checked
+    within "table" do
+      expect(page).to have_checked_field("todo")
+    end
 
     expect(page).to_not have_content("this is a task")
   end
