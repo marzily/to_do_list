@@ -1,3 +1,60 @@
 // Place all the styles related to the Todos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#add, .return {
+  margin-left: 50px;
+}
+
+table {
+  margin-left: 50px;
+}
+
+th {
+  padding: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+td {
+  text-align: center;
+}
+
+.task {
+  text-align:left;
+  width: 500px;
+}
+
+.return {
+  margin-top: 30px;
+  padding-left: 50px;
+}
+
+
+#new{
+  text-align: center;
+}
+
+#create-task {
+  text-align: left;
+  width: 400px;
+}
+
+#details {
+  padding-top: 30px;
+  text-align: left;
+}
+
+.show {
+  padding-right: 50px;
+}
+
+#details {
+  text-align: left;
+}
+
+h2 {
+    margin: 50px;
+    margin-right: 300px;
+    margin-bottom: 15px;
+}

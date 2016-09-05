@@ -1,14 +1,16 @@
-<p><%= button_to "ToDos List", todos_path, method: "get" %></p>
-<br/>
+<p><%= button_to "ToDos List", todos_path, method: "get", class: "return" %></p>
 
-<h1><%= @todo.task %></h1>
+<h2><%= @todo.task %></h2>
 
 <table>
   <tr>
-    <td>Deadline: <%= @todo.deadline %></td>
-    <td>Completed: <%= check_box_tag("todo", "completed", checked = @todo.completed, id: "completed")%></td>
-    <td><%= button_to "Delete", todo_path(id: @todo.id), method: "delete" %></td>
+    <td class="show">Deadline: <%= @todo.deadline %></td>
+    <td class="show">Completed: <%= check_box_tag("todo", "completed", checked = @todo.completed, id: "completed")%></td>
+    <td class="show"><%= button_to "Delete", todo_path(id: @todo.id), method: "delete" %></td>
+  </tr>
+  <tr>
+    <td id="details">
+      <%= @todo.more_details %>
+    </td>
   </tr>
 </table>
-
-<p><%= @todo.more_details %></p>

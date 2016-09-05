@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+    background-image: url("coffee\ and\ croissants.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: courier;
+}
+
+h1 {
+    margin: 50px;
+    margin-bottom: 15px;
+}
