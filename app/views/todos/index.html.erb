@@ -1,8 +1,6 @@
 <h1>ToDos</h1>
 
-<%= button_to "Add ToDo", new_todo_path, method: "get" %>
-
-<br/>
+<%= button_to "Add ToDo", new_todo_path, method: "get", id: "add" %>
 
 <table>
   <thead>
@@ -13,7 +11,7 @@
   <tbody>
     <% @todos.each do |todo|%>
       <tr>
-        <td><%= link_to todo.task, todo_path(id: todo.id) %></td>
+        <td class="task"><%= link_to todo.task, todo_path(id: todo.id) %></td>
         <td><%= todo.deadline %></td>
         <td><%= check_box_tag("todo", "completed", checked = todo.completed, id: "completed")%></td>
         <td><%= button_to "Delete", todo_path(id: todo.id), method: "delete" %></td>

@@ -24,3 +24,8 @@ body {
     padding: 0;
     font-family: courier;
 }
+
+h1 {
+    margin: 50px;
+    margin-bottom: 15px;
+}
