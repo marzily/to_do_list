@@ -1,6 +1,12 @@
 require "rails_helper"
 
 RSpec.feature "add ToDo to list", type: :feature do
+  it 'has a button to create a new ToDo on the landing page' do
+    visit root_path
+
+    expect(page).to have_button("Add a ToDo")
+  end
+
   it 'has the right content on the new page' do
     visit new_todo_path
 
@@ -33,7 +39,7 @@ RSpec.feature "add ToDo to list", type: :feature do
     within("table") do
       expect(page).to have_content("complete rails app")
     end
-    
+
     within "table" do
       expect(page).to have_checked_field("todo")
     end
