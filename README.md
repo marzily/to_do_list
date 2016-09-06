@@ -29,6 +29,12 @@ $ bundle install
 $ rails server
 ```
 
+To run tests:
+```
+$ rspec
+```
+
+
 #### Landing Page/List Overview
 ![alt text](public/index1_page.png?raw=true "Title")
 
