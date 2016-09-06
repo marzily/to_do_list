@@ -4,7 +4,9 @@
 
 <table>
   <tr>
-    <td class="show">Deadline: <%= @todo.deadline %></td>
+    <td class="show <%= "highlight" if @todo.deadline < Date.current %>">
+      Deadline: <%= @todo.deadline %>
+    </td>
     <td class="show">Completed: <%= check_box_tag("todo", "completed", checked = @todo.completed, id: "completed")%></td>
     <td class="show"><%= button_to "Delete", todo_path(id: @todo.id), method: "delete" %></td>
   </tr>

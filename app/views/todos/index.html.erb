@@ -12,12 +12,9 @@
     <% @todos.each do |todo| %>
       <tr>
         <td class="task"><%= link_to todo.task, todo_path(id: todo.id) %></td>
-          <td class="deadline
-            <% if todo.deadline <= Date.current %>
-              <%= "highlight" %>
-            <% end %>
-          ">
-          <%= todo.deadline %></td>
+          <td class="deadline <%= "highlight" if todo.deadline < Date.current %>">
+            <%= todo.deadline %>
+          </td>
 
         <td><%= check_box_tag("todo", "completed", checked = todo.completed, class: "completed")%></td>
         <td><%= button_to "Delete", todo_path(id: todo.id), method: "delete" %></td>
