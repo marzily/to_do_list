@@ -15,4 +15,8 @@ class Todo < ActiveRecord::Base
              completed: todo_params[:completed],
              more_details: todo_params[:more_details])
   end
+
+  def update_completed
+    completed = (completed == true ? false : true)
+  end
 end

@@ -1,5 +1,5 @@
 class TodosController < ApplicationController
-  before_action :set_todo, only: [:show, :destroy]
+  before_action :set_todo, only: [:show, :update, :destroy]
 
   def index
     @todos = Todo.all
@@ -13,13 +13,18 @@ class TodosController < ApplicationController
     @todo = Todo.new_with_deadline(todo_params)
 
     if @todo.save
-      redirect_to @todo, notice: 'ToDo was successfully created.'
+      redirect_to @todo
     else
       render :new
     end
   end
 
   def show
+  end
+
+  def update
+    @todo.update_completed
+    redirect_to todos_path
   end
 
   def destroy
