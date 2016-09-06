@@ -9,11 +9,17 @@
     </tr>
   </thead>
   <tbody>
-    <% @todos.each do |todo|%>
+    <% @todos.each do |todo| %>
       <tr>
         <td class="task"><%= link_to todo.task, todo_path(id: todo.id) %></td>
-        <td><%= todo.deadline %></td>
-        <td><%= check_box_tag("todo", "completed", checked = todo.completed, id: "completed")%></td>
+          <td class="deadline
+            <% if todo.deadline <= Date.current %>
+              <%= "highlight" %>
+            <% end %>
+          ">
+          <%= todo.deadline %></td>
+
+        <td><%= check_box_tag("todo", "completed", checked = todo.completed, class: "completed")%></td>
         <td><%= button_to "Delete", todo_path(id: todo.id), method: "delete" %></td>
       </tr>
     <% end %>
