@@ -21,3 +21,12 @@ To run code, clone repo:
 $ bundle install
 $ rails server
 ```
+
+#### Landing Page/List Overview
+![alt text](public/index1_page.png?raw=true "Title")
+
+#### New Page
+![alt text](public/new_page.png?raw=true "Title")
+
+#### Show Page
+![alt text](public/show_page.png?raw=true "Title")

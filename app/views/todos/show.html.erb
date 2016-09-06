@@ -11,7 +11,7 @@
     <td class="show"><%= button_to "Delete", todo_path(id: @todo.id), method: "delete" %></td>
   </tr>
   <tr>
-    <td id="details">
+    <td id="details" class="show">
       <%= @todo.more_details %>
     </td>
   </tr>
