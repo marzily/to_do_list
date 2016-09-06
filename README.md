@@ -21,5 +21,3 @@ To run code, clone repo:
 $ bundle install
 $ rails server
 ```
-
-Additionally, the production application is hosted on Heroku at: 
