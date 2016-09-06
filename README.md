@@ -2,7 +2,7 @@
 
 This application allows users to create a ToDo list.
 
-The functionality consists of the following:
+Functionality consists of the following:
 
 * As a user, I can add a TODO to the list.
 * As a user, I can see all the TODOs on the list in an overview.
