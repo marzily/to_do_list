@@ -15,7 +15,7 @@
           <td class="deadline <%= "highlight" if todo.deadline < Date.current %>">
             <%= todo.deadline %>
           </td>
-        <td><%= check_box_tag("todo", "completed", checked = todo.completed, class: "completed")%></td>
+        <td><%= check_box_tag("todo", "completed", checked = todo.completed, class: "completed", id: "checkbox-#{todo.id}")%></td>
         <td><%= button_to "Delete", todo_path(id: todo.id), method: "delete" %></td>
       </tr>
     <% end %>

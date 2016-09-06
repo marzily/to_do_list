@@ -2,6 +2,13 @@
 
 This application allows users to create a ToDo list.
 
+```
+Domain: To-Do List
+Interface: Web UI (Server-generated)
+Platform: Ruby
+Language: Ruby
+```
+
 Functionality consists of the following:
 
 * As a user, I can add a TODO to the list.
