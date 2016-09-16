@@ -1,0 +1,105 @@
+/* line 5, /Users/margie/projects/challenges/companies/iTrellis/to_do_list/app/assets/stylesheets/todos.scss */
+#add, .return {
+  margin-left: 50px;
+}
+
+/* line 9, /Users/margie/projects/challenges/companies/iTrellis/to_do_list/app/assets/stylesheets/todos.scss */
+table {
+  margin-left: 50px;
+}
+
+/* line 13, /Users/margie/projects/challenges/companies/iTrellis/to_do_list/app/assets/stylesheets/todos.scss */
+th {
+  padding: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+/* line 19, /Users/margie/projects/challenges/companies/iTrellis/to_do_list/app/assets/stylesheets/todos.scss */
+td {
+  text-align: center;
+}
+
+/* line 23, /Users/margie/projects/challenges/companies/iTrellis/to_do_list/app/assets/stylesheets/todos.scss */
+.task {
+  text-align: left;
+  width: 500px;
+}
+
+/* line 28, /Users/margie/projects/challenges/companies/iTrellis/to_do_list/app/assets/stylesheets/todos.scss */
+.return {
+  margin-top: 30px;
+  padding-left: 50px;
+}
+
+/* line 34, /Users/margie/projects/challenges/companies/iTrellis/to_do_list/app/assets/stylesheets/todos.scss */
+#new {
+  text-align: center;
+}
+
+/* line 38, /Users/margie/projects/challenges/companies/iTrellis/to_do_list/app/assets/stylesheets/todos.scss */
+#create-task {
+  text-align: left;
+  width: 400px;
+}
+
+/* line 43, /Users/margie/projects/challenges/companies/iTrellis/to_do_list/app/assets/stylesheets/todos.scss */
+#details {
+  padding-top: 30px;
+  text-align: left;
+}
+
+/* line 48, /Users/margie/projects/challenges/companies/iTrellis/to_do_list/app/assets/stylesheets/todos.scss */
+.show {
+  padding-right: 50px;
+  text-align: left;
+}
+
+/* line 53, /Users/margie/projects/challenges/companies/iTrellis/to_do_list/app/assets/stylesheets/todos.scss */
+#details {
+  text-align: left;
+}
+
+/* line 57, /Users/margie/projects/challenges/companies/iTrellis/to_do_list/app/assets/stylesheets/todos.scss */
+h2 {
+  margin: 50px;
+  margin-right: 300px;
+  margin-bottom: 15px;
+}
+
+/* line 63, /Users/margie/projects/challenges/companies/iTrellis/to_do_list/app/assets/stylesheets/todos.scss */
+.highlight {
+  background-color: yellow;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
+
+body {
+    background-image: url("coffee\ and\ croissants.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: courier;
+}
+
+h1 {
+    margin: 50px;
+    margin-bottom: 15px;
+}

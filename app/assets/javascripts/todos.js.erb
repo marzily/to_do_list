@@ -1,8 +1,18 @@
 function toggleCompleted() {
-  $('.completed').each(function(i){
-    input = $('.completed')[i];
-    console.log(input);
-  });
+  $('.completed').each(function(i) {
+    var checkbox = $('.completed')[i];
+
+    $(checkbox).on('click', function() {
+      $.ajax({
+        url: "/todos/" + $(checkbox).attr('id')[9],
+        type: "PATCH",
+        data: { completed: checkbox.checked },
+        error: function(message) {
+          console.error(message);
+        }
+      });
+    })
+  })
 }
 
 $(document).ready(function() {

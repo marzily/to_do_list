@@ -1,7 +1,7 @@
 <p><%= button_to "ToDos List", todos_path, method: "get", class: "return" %></p>
 
-<h2><%= @todo.task %></h2>
-
+<h2><%= @todo.task %> <%= button_to "Duplicate", edit_todo_path(id: @todo.id), method: "get" %> </h2>
+<%# byebug %>
 <table>
   <tr>
     <td class="show <%= "highlight" if @todo.deadline < Date.current %>">
